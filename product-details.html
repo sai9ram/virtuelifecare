@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Virtue Life Care</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4338CA',
+                        secondary: '#059669',
+                        accent: '#F59E0B'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '12px'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 2s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .blob {
+            filter: blur(60px);
+            opacity: 0.15;
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .category-btn.active {
+            background-color: #4338CA;
+            color: white;
+            border-color: #4338CA;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden md:pb-0 pb-20">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        <div
+            class="blob w-64 h-64 md:w-[500px] md:h-[500px] bg-primary -top-20 -left-20 md:-top-40 md:-left-40 animate-pulse-slow">
+        </div>
+        <div class="blob w-64 h-64 md:w-[400px] md:h-[400px] bg-secondary top-1/2 -right-20 animate-float-delayed">
+        </div>
+        <!-- Animated medical particles -->
+        <div class="absolute top-20 right-20 w-8 h-8 opacity-20 animate-float"><i
+                class="ri-microscope-line text-primary text-3xl"></i></div>
+        <div class="absolute bottom-40 left-10 w-8 h-8 opacity-20 animate-float-delayed"><i
+                class="ri-pulse-line text-secondary text-3xl"></i></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/1cd85d1b8dbae4b4ddbf339ff2b2751a.jpeg"
+                            alt="Virtue Life Care Logo" class="h-10 w-auto object-contain">
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                        <a href="products.html"
+                            class="text-gray-700 hover:text-primary transition-colors font-bold text-primary">Products</a>
+                        <a href="careers.html" class="text-gray-700 hover:text-primary transition-colors">Careers</a>
+                    </div>
+                </div>
+                <a href="contact.html"
+                    class="bg-primary text-white px-4 md:px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-28">
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Sidebar (Category List) -->
+            <div class="lg:w-1/4">
+                <div
+                    class="bg-white rounded-2xl shadow-lg border border-gray-100 p-4 sticky top-24 overflow-y-auto max-h-[calc(100vh-8rem)]">
+                    <h3 class="text-lg font-bold mb-4 px-2 text-slate-800">Categories</h3>
+                    <div class="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0"
+                        id="category-list">
+                        <!-- Categories will be dynamically active -->
+                        <button onclick="showCategory('gynecology')" id="btn-gynecology"
+                            class="category-btn active w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Gynecology</span>
+                        </button>
+                        <button onclick="showCategory('nutrition')" id="btn-nutrition"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Nutrition</span>
+                        </button>
+                        <button onclick="showCategory('cardiology')" id="btn-cardiology"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Cardiology</span>
+                        </button>
+                        <button onclick="showCategory('diabetic')" id="btn-diabetic"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Diabetic Care</span>
+                        </button>
+                        <button onclick="showCategory('neurology')" id="btn-neurology"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Neurology</span>
+                        </button>
+                        <button onclick="showCategory('general-medicine')" id="btn-general-medicine"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">General Medicine</span>
+                        </button>
+                        <button onclick="showCategory('dermatology')" id="btn-dermatology"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Dermatology</span>
+                        </button>
+                        <button onclick="showCategory('pediatrics')" id="btn-pediatrics"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Pediatrics</span>
+                        </button>
+                        <button onclick="showCategory('orthopedics')" id="btn-orthopedics"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Orthopedics</span>
+                        </button>
+                        <button onclick="showCategory('nephrology')" id="btn-nephrology"
+                            class="category-btn w-full text-left px-4 py-3 rounded-xl transition-all duration-300 border border-slate-100 hover:border-slate-200 shadow-sm hover:shadow-md active:shadow-inner whitespace-nowrap">
+                            <span class="font-medium">Nephrology</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="lg:w-3/4">
+                <!-- Template for a Category Section -->
+
+                <div id="gynecology" class="category-section">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Gynecology
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">We offer a wide range of
+                            specialized women's health products designed to support reproductive health and overall
+                            well-being at every stage of life.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <!-- Repeat this block for multiple images -->
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="letofert.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="dynosca_bd.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="callong_xt.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="velbeday.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="hblena_xt.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutrition -->
+                <div id="nutrition" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Nutrition Products
+                        </h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Our advanced range of
+                            nutritional supplements helps bridge the gap in daily dietary requirements, promoting
+                            optimal health and immunity.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="velbeday.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="hblena_xt.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="callong_xt.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cardiology -->
+                <div id="cardiology" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Cardiology
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">We deliver high-quality
+                            cardiovascular medications focused on managing heart conditions and improving patient
+                            quality of life.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="arbkey_20.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="arbkey_40.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="arbkey_h40.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="arbkey_biso_2.5.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="arbkey_trio.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="emprostat_10.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="emprostat_20.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="emprostat_gold.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="emprostat_gold20.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diabetic Care -->
+                <div id="diabetic" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Diabetic Care
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Our diabetic care
+                            portfolio includes essential medications and supportive treatments to help manage blood
+                            sugar levels effectively.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="vistamark_gm.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="vistamark_gm1.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="vistamark_m.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="vistamark_dm.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="vistamark.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurology -->
+                <div id="neurology" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Neurology Products
+                        </h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Targeted pharmaceutical
+                            solutions for neurological disorders, ensuring better management and care for patients.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="galimerz_nt.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="galimerz_gel.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="velbeday_pfs.jpeg" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Medicine -->
+                <div id="general-medicine" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">General Medicine
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Essential medications
+                            including pain management and antibiotics for holistic healthcare.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="virdol_sp.jpeg" alt="Virdol SP"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="virdol_max_th4.jpeg" alt="Virdol Max TH4"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="moxtune.jpeg" alt="Moxtune"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="moxtune_625_lb.jpeg" alt="Moxtune 625 LB"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="icicef.jpeg" alt="Icicef"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="icicef_o.jpeg" alt="Icicef O"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Pediatrics -->
+                <div id="pediatrics" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Pediatric Products
+                        </h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Gentle and effective
+                            healthcare solutions specifically formulated for children's unique needs.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="https://placehold.co/600x450/0EA5E9/white?text=Pediatrics+1" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dermatology -->
+                <div id="dermatology" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Dermatology
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Advanced skincare
+                            treatments and dermatological preparations for healthy, radiant skin.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="https://placehold.co/600x450/D97706/white?text=Dermatology+1" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nephrology -->
+                <div id="nephrology" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Nephrology
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Specialized medications
+                            for kidney health and renal disorder management.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="https://placehold.co/600x450/2563EB/white?text=Nephrology+1" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics -->
+                <div id="orthopedics" class="category-section hidden">
+                    <div class="mb-12">
+                        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Orthopedics
+                            Products</h1>
+                        <p class="text-slate-600 text-lg md:text-xl leading-relaxed max-w-3xl">Pharmaceutical solutions
+                            supporting bone health, joint mobility, and pain management.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+                        <div
+                            class="group relative overflow-hidden rounded-2xl shadow-lg border border-slate-100 aspect-[4/3]">
+                            <img src="https://placehold.co/600x450/52525B/white?text=Orthopedics+1" alt="Product Image"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="VIRTUE LOGO.jpeg" alt="Virtue Life Care Logo" class="h-12 w-auto object-contain">
+                        <div>
+                            <h3 class="text-xl font-bold">Virtue Life Care</h3>
+                            <p class="text-sm text-gray-400">Marketing Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Excellence in healthcare solutions since 2020. Committed to quality, innovation, and ethical
+                        practices in pharmaceutical services.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p><strong>CIN:</strong> U52590AP2020PTC116248</p>
+                        <p><strong>Email:</strong> support@virtuelifecare.com</p>
+                        <p><strong>Phone:</strong> 9581555536</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex items-start space-x-3">
+                            <div>
+                                <p class="text-sm">Regd Office:</p>
+                                <p class="text-sm"># 115-7-297, 2nd Floor, Konthamuru Katheru Road, Konthamuru,
+                                    Rajahmundry, Andhra Pradesh-533102</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div>
+                                <p class="text-sm">Corp. Office:</p>
+                                <p class="text-sm">#14, 15, VinayakaLayout, Shanthi Pura, Electronic City Phase II,
+                                    Bangalore, Karnataka, India -560100</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div>
+                                <p class="text-sm">Email:</p>
+                                <p class="text-sm">support@virtuelifecare.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div>
+                                <p class="text-sm">Mobile:</p>
+                                <p class="text-sm">9581555536</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Virtue Life Care Marketing Pvt. Ltd. All rights reserved. | Designed by <a
+                        href="https://www.theupliv.com" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition-colors">UPliv</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons & Mobile Nav -->
+    <div class="fixed bottom-24 right-4 md:bottom-6 md:right-6 z-40 flex flex-col space-y-3">
+        <button id="whatsapp-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors hover:scale-105 transform">
+            <i class="ri-whatsapp-fill text-xl md:text-2xl"></i>
+        </button>
+        <button id="livechat-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-colors hover:scale-105 transform">
+            <i class="ri-customer-service-2-fill text-xl md:text-2xl"></i>
+        </button>
+    </div>
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-50 px-4 pb-4 pt-2">
+        <div class="flex justify-around items-center">
+            <a href="index.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-home-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="about.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-information-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">About</span>
+            </a>
+            <a href="products.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-medicine-bottle-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Products</span>
+            </a>
+            <a href="careers.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-briefcase-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Careers</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function showCategory(categoryId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.category-section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('reveal', 'active'); // Reset animation
+            });
+
+            // Show selected section
+            const selectedSection = document.getElementById(categoryId);
+            if (selectedSection) {
+                selectedSection.classList.remove('hidden');
+                // Trigger simple fade in
+                selectedSection.animate([
+                    { opacity: 0, transform: 'translateY(20px)' },
+                    { opacity: 1, transform: 'translateY(0)' }
+                ], {
+                    duration: 500,
+                    easing: 'ease-out',
+                    fill: 'forwards'
+                });
+            }
+
+            // Update button states
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Set active button
+            const activeBtn = document.getElementById('btn-' + categoryId);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+        }
+
+        // Initialize from URL hash if present
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showCategory(hash);
+            }
+        });
+
+        // Mobile Menu Script from Standard
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    </script>
+    <script id="floating-support-buttons">
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const livechatBtn = document.getElementById('livechat-btn');
+            const mobileWhatsappBtn = document.getElementById('mobile-whatsapp');
+            const mobileChatBtn = document.getElementById('mobile-chat');
+            function openWhatsApp() {
+                const phoneNumber = '919581555536';
+                const message = 'Hello! I would like to inquire about your healthcare products and services.';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+            function openLiveChat() {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end sm:items-center justify-center p-4';
+                modal.innerHTML = `
+<div class="bg-white rounded-t-2xl sm:rounded-2xl max-w-md w-full max-h-[80vh] flex flex-col">
+<div class="flex items-center justify-between p-4 border-b border-gray-200">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full">
+<i class="ri-robot-line text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Chat Support</h3>
+<p class="text-xs text-green-600">● Online</p>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600" onclick="this.closest('.fixed').remove()">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 max-h-96">
+<div class="flex items-start space-x-2">
+<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">Hello! Welcome to Virtue Life Care. I'm here to help you with instant answers. How can I assist you today?</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200">
+<div class="flex space-x-2">
+<input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+<button id="send-chat" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+<i class="ri-send-plane-line"></i>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="products">Products</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="price">Pricing</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="quality">Quality</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="contact">Contact</button>
+</div>
+</div>
+</div>
+`;
+                document.body.appendChild(modal);
+                const chatResponses = {
+                    'hello': 'Hello! Welcome to Virtue Life Care. How can I help you today?',
+                    'hi': 'Hi there! Thanks for contacting Virtue Life Care. What can I assist you with?',
+                    'products': 'We offer pharmaceutical products in Gynecology, Nutrition, Cardiology, Diabetic Care, Neurology, Pain Management, Antibiotics, and General Medicine. Which category interests you?',
+                    'price': 'For pricing information, please contact us at 9581555536 or email support@virtuelifecare.com. Our team will provide you with detailed quotes.',
+                    'quality': 'All our products are ISO certified and manufactured following international quality standards. We maintain 99% quality compliance.',
+                    'contact': 'You can reach us at:\nPhone: 9581555536\nEmail: support@virtuelifecare.com\nHead Office: Rajahmundry, Andhra Pradesh',
+                    'help': 'I can help you with information about our products, pricing, quality standards, and contact details. What would you like to know?',
+                    'default': 'Thank you for your message. For specific inquiries, please contact us at 9581555536 or support@virtuelifecare.com. Our team will assist you promptly.'
+                };
+                const chatMessages = modal.querySelector('#chat-messages');
+                const chatInput = modal.querySelector('#chat-input');
+                const sendButton = modal.querySelector('#send-chat');
+                const quickButtons = modal.querySelectorAll('.chat-quick-btn');
+                function addMessage(message, isUser = false) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `flex items-start space-x-2 ${isUser ? 'justify-end' : ''}`;
+                    messageDiv.innerHTML = isUser ?
+                        `<div class="bg-primary text-white rounded-lg p-3 max-w-xs">
+<p class="text-sm">${message}</p>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full flex-shrink-0">
+<i class="ri-user-line text-white text-sm"></i>
+</div>` :
+                        `<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">${message}</p>
+</div>`;
+                    chatMessages.appendChild(messageDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+                function getResponse(message) {
+                    const lowerMsg = message.toLowerCase();
+                    for (let key in chatResponses) {
+                        if (lowerMsg.includes(key)) {
+                            return chatResponses[key];
+                        }
+                    }
+                    return chatResponses['default'];
+                }
+                function sendMessage() {
+                    const message = chatInput.value.trim();
+                    if (message) {
+                        addMessage(message, true);
+                        chatInput.value = '';
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    }
+                }
+                sendButton.addEventListener('click', sendMessage);
+                chatInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+                quickButtons.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const message = this.getAttribute('data-msg');
+                        addMessage(message, true);
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    });
+                });
+            }
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (livechatBtn) {
+                livechatBtn.addEventListener('click', openLiveChat);
+            }
+            if (mobileWhatsappBtn) {
+                mobileWhatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (mobileChatBtn) {
+                mobileChatBtn.addEventListener('click', openLiveChat);
+            }
+        });
+    </script>
+</body>
+
+</html>

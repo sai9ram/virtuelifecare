@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Virtue Life Care</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4338CA',
+                        secondary: '#059669',
+                        accent: '#F59E0B'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '12px'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 2s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blob {
+            filter: blur(60px);
+            opacity: 0.15;
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden md:pb-0 pb-20">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+            class="blob w-64 h-64 md:w-[500px] md:h-[500px] bg-primary -top-20 -left-20 md:-top-40 md:-left-40 animate-pulse-slow">
+        </div>
+        <div class="blob w-64 h-64 md:w-[400px] md:h-[400px] bg-secondary top-1/2 -right-20 animate-float-delayed">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/1cd85d1b8dbae4b4ddbf339ff2b2751a.jpeg"
+                            alt="Virtue Life Care Logo" class="h-10 w-auto object-contain">
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                        <a href="products.html" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                        <a href="careers.html" class="text-gray-700 hover:text-primary transition-colors">Careers</a>
+                    </div>
+                </div>
+                <a href="contact.html"
+                    class="bg-primary text-white px-4 md:px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    </script>
+
+    <!-- Hero Header -->
+    <header class="relative pt-36 pb-20 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+            <!-- Animated medical particles -->
+            <div class="absolute top-10 right-10 w-8 h-8 opacity-20 animate-float"><i
+                    class="ri-medicine-bottle-line text-primary text-3xl"></i></div>
+            <div class="absolute bottom-10 left-10 w-8 h-8 opacity-20 animate-float-delayed"><i
+                    class="ri-flask-line text-secondary text-3xl"></i></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="reveal">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase">Our
+                    Portfolio</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight text-slate-900">
+                    Trusted <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Therapeutics</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-slate-600 text-lg md:text-xl leading-relaxed">
+                    Explore our comprehensive range of pharmaceutical solutions across multiple therapeutic areas,
+                    engineered for excellence and patient care.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Comprehensive Products Showcase Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-block mb-4">
+                    <div class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-bold">
+                        COMPREHENSIVE PORTFOLIO
+                    </div>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+                    Our Complete Product Range
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Discover our extensive lineup of pharmaceutical solutions designed to address diverse therapeutic needs
+                </p>
+            </div>
+            
+            <!-- Products Showcase Image -->
+            <div class="reveal bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <!-- Main Product Showcase Image -->
+                <div class="w-full bg-white p-4 md:p-8">
+                    <img src="73897.jpg" alt="Our Comprehensive Products - Complete Pharmaceutical Portfolio" 
+                        class="w-full h-auto object-contain rounded-2xl">
+                </div>
+
+                <!-- Additional Products Grid Display -->
+                <div class="relative bg-gradient-to-b from-slate-900 to-slate-800 p-12">
+                    <!-- Header Banner -->
+                    <div class="text-center mb-12">
+                        <h3 class="text-white text-3xl md:text-4xl font-bold mb-2">Featured Products Details</h3>
+                        <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                    </div>
+
+                    <!-- Products Grid Display -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- Dynosca BD -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="dynosca_bd.jpeg" alt="Dynosca BD" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Dynosca BD</h4>
+                            <p class="text-white/70 text-xs mt-1">Antimicrobial</p>
+                        </div>
+
+                        <!-- Letofert -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="letofert.jpeg" alt="Letofert" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Letofert 2.5</h4>
+                            <p class="text-white/70 text-xs mt-1">Gynecology</p>
+                        </div>
+
+                        <!-- Hblena XT -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="hblena_xt.jpeg" alt="Hblena XT" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Hblena XT</h4>
+                            <p class="text-white/70 text-xs mt-1">Cardiology</p>
+                        </div>
+
+                        <!-- Callong XT -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="callong_xt.jpeg" alt="Callong XT" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Callong XT</h4>
+                            <p class="text-white/70 text-xs mt-1">Nutrition</p>
+                        </div>
+
+                        <!-- Velbeday -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="velbeday.jpeg" alt="Velbeday" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Velbeday</h4>
+                            <p class="text-white/70 text-xs mt-1">Metabolic</p>
+                        </div>
+
+                        <!-- Velbeday PFS -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="velbeday_pfs.jpeg" alt="Velbeday PFS" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Velbeday PFS</h4>
+                            <p class="text-white/70 text-xs mt-1">Metabolic Support</p>
+                        </div>
+
+                        <!-- Virdol P -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="virdol_sp.jpeg" alt="Virdol SP" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Virdol SP</h4>
+                            <p class="text-white/70 text-xs mt-1">Cardiovascular</p>
+                        </div>
+
+                        <!-- Virdol Max -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="virdol_max_th4.jpeg" alt="Virdol Max TH4" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Virdol Max</h4>
+                            <p class="text-white/70 text-xs mt-1">Cardiac Care</p>
+                        </div>
+
+                        <!-- Galimerz MNT -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="galimerz_nt.jpeg" alt="Galimerz MNT" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Galimerz MNT</h4>
+                            <p class="text-white/70 text-xs mt-1">Antibiotic</p>
+                        </div>
+
+                        <!-- Galimerz Gel -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="galimerz_gel.jpeg" alt="Galimerz Gel" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Galimerz Gel</h4>
+                            <p class="text-white/70 text-xs mt-1">Topical</p>
+                        </div>
+
+                        <!-- Moxtune 625 -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="moxtune_625_lb.jpeg" alt="Moxtune 625 LB" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Moxtune 625 LB</h4>
+                            <p class="text-white/70 text-xs mt-1">Antibiotic</p>
+                        </div>
+
+                        <!-- Icicef -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="icicef_o.jpeg" alt="Icicef O" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Icicef O</h4>
+                            <p class="text-white/70 text-xs mt-1">Antibiotic</p>
+                        </div>
+
+                        <!-- Vistamark M -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="vistamark_m.jpeg" alt="Vistamark M" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Vistamark M</h4>
+                            <p class="text-white/70 text-xs mt-1">Nutrition</p>
+                        </div>
+
+                        <!-- Vistamark DM -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="vistamark_dm.jpeg" alt="Vistamark DM" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Vistamark DM</h4>
+                            <p class="text-white/70 text-xs mt-1">Diabetic Care</p>
+                        </div>
+
+                        <!-- Vistamark GM -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="vistamark_gm.jpeg" alt="Vistamark GM" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Vistamark GM</h4>
+                            <p class="text-white/70 text-xs mt-1">Nutrition</p>
+                        </div>
+
+                        <!-- Arbkey 20/40 -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="arbkey_20.jpeg" alt="Arbkey 20/40" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Arbkey 20/40</h4>
+                            <p class="text-white/70 text-xs mt-1">Hypertension</p>
+                        </div>
+
+                        <!-- Arbkey H40 -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="arbkey_h40.jpeg" alt="Arbkey H40" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Arbkey H40</h4>
+                            <p class="text-white/70 text-xs mt-1">Cardiology</p>
+                        </div>
+
+                        <!-- Arbkey Trio -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="arbkey_trio.jpeg" alt="Arbkey Trio" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Arbkey Trio</h4>
+                            <p class="text-white/70 text-xs mt-1">Hypertension</p>
+                        </div>
+
+                        <!-- Arbkey Biso -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="arbkey_biso.jpeg" alt="Arbkey Biso" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Arbkey Biso</h4>
+                            <p class="text-white/70 text-xs mt-1">Cardiology</p>
+                        </div>
+
+                        <!-- Emprostat -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="emprostat.jpeg" alt="Emprostat" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Emprostat</h4>
+                            <p class="text-white/70 text-xs mt-1">Urological</p>
+                        </div>
+
+                        <!-- Emprostat Gold -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all">
+                            <div class="aspect-square mb-3 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden">
+                                <img src="emprostat_gold.jpeg" alt="Emprostat Gold" class="w-full h-full object-contain p-2">
+                            </div>
+                            <h4 class="text-white font-bold text-sm">Emprostat Gold</h4>
+                            <p class="text-white/70 text-xs mt-1">Premium Care</p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Message -->
+                    <div class="mt-12 text-center border-t border-white/20 pt-8">
+                        <p class="text-white/80 text-sm">A complete range of pharmaceutical solutions for diverse therapeutic needs</p>
+                        <div class="flex justify-center items-center gap-2 mt-4">
+                            <div class="w-8 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+                            <span class="text-primary font-semibold text-sm">Premium Quality Medicine</span>
+                            <div class="w-8 h-1 bg-gradient-to-r from-secondary to-primary rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Overview Grid -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynosca BD -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all">
+                    <div class="inline-block mb-3">
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Antimicrobial</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Dynosca BD</h3>
+                    <p class="text-gray-600 text-sm mb-4">Mi 80mg + DCL 12.5mg + Chloromycetin 300mg + Berberine 277.5mg + Vit Argininе 250mg</p>
+                    <div class="text-primary font-semibold text-sm">Advanced Formulation</div>
+                </div>
+
+                <!-- Letofert -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all" style="transition-delay: 100ms;">
+                    <div class="inline-block mb-3">
+                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-semibold">Gynecology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Letofert 2.5</h3>
+                    <p class="text-gray-600 text-sm mb-4">Letrozole 2.5mg/Tablets - Fertility Enhancement</p>
+                    <div class="text-primary font-semibold text-sm">Premium Quality</div>
+                </div>
+
+                <!-- Hblena XT -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all" style="transition-delay: 200ms;">
+                    <div class="inline-block mb-3">
+                        <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">Cardiology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Hblena XT</h3>
+                    <p class="text-gray-600 text-sm mb-4">Hemoglobin + Vitamin C 500mg + Folic Acid 400mg + B12 7.5mcg Tablets</p>
+                    <div class="text-primary font-semibold text-sm">Cardiac Support</div>
+                </div>
+
+                <!-- Callong XT -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all" style="transition-delay: 300ms;">
+                    <div class="inline-block mb-3">
+                        <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">Nutrition</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Callong XT</h3>
+                    <p class="text-gray-600 text-sm mb-4">Calcium + Zinc + Magnesium + Vit D3 + L-Methionine + Methylsulfonylmethane</p>
+                    <div class="text-primary font-semibold text-sm">Bone Health</div>
+                </div>
+
+                <!-- Velbeday -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all" style="transition-delay: 100ms;">
+                    <div class="inline-block mb-3">
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">Metabolic</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Velbeday</h3>
+                    <p class="text-gray-600 text-sm mb-4">Methylcobalamin 1500mg + Metformin + Natural Extracts Tablets</p>
+                    <div class="text-primary font-semibold text-sm">Metabolic Support</div>
+                </div>
+
+                <!-- Dasozol -->
+                <div class="reveal bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all" style="transition-delay: 200ms;">
+                    <div class="inline-block mb-3">
+                        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">Gastro</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Dasozol DSR</h3>
+                    <p class="text-gray-600 text-sm mb-4">Pantoprazole 40mg + Domperidone 30mg DR Capsules</p>
+                    <div class="text-primary font-semibold text-sm">GI Protection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="py-24 bg-white/50 backdrop-blur-sm relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- Gynecology -->
+                <a href="product-details.html#gynecology"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="Gynecology.jpg" alt="Gynecology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Gynecology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Specialized women's health products and reproductive
+                        care solutions for every stage of life.</p>
+                    <div class="flex items-center text-pink-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Nutrition -->
+                <a href="product-details.html#nutrition"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 100ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="nutrition.jpg" alt="Nutrition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Nutrition</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Essential vitamins, minerals, and advanced
+                        nutritional supplements for optimal immune health.</p>
+                    <div class="flex items-center text-green-600 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Cardiology -->
+                <a href="product-details.html#cardiology"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 200ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="cardiology.avif" alt="Cardiology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Cardiology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Precision cardiovascular medications for heart health
+                        and long-term circulatory care.</p>
+                    <div class="flex items-center text-red-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Diabetic Care -->
+                <a href="product-details.html#diabetic"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 300ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="diabetics.jpg" alt="Diabetic Care"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Diabetic Care</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Comprehensive diabetes management solutions and blood
+                        sugar control medications.</p>
+                    <div class="flex items-center text-orange-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Neurology -->
+                <a href="product-details.html#neurology"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="neurology0.jpg" alt="Neurology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Neurology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Targeted neurological treatments for brain health and
+                        complex nervous system disorders.</p>
+                    <div class="flex items-center text-purple-600 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- General Medicine -->
+                <a href="product-details.html#general-medicine"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 100ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="general-medicine.webp" alt="General Medicine"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">General Medicine</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Essential medications including pain management and
+                        antibiotics for holistic healthcare.</p>
+                    <div class="flex items-center text-indigo-600 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Dermatology -->
+                <a href="product-details.html#dermatology"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 200ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="dermatology.jpg" alt="Dermatology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Dermatology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Advanced skin care treatments and dermatological
+                        solutions for dermal health.</p>
+                    <div class="flex items-center text-amber-600 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Pediatrics -->
+                <a href="product-details.html#pediatrics"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 100ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="pediatrics.jpg" alt="Pediatrics"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Pediatrics</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Child-friendly medications and specialized healthcare
+                        solutions for the youngest patients.</p>
+                    <div class="flex items-center text-sky-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Orthopedics -->
+                <a href="product-details.html#orthopedics"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 200ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="orthopedics.webp" alt="Orthopedics"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Orthopedics</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Bone and joint health medications for long-term
+                        musculoskeletal care and recovery.</p>
+                    <div class="flex items-center text-rose-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+
+                <!-- Nephrology -->
+                <a href="product-details.html#nephrology"
+                    class="block reveal group bg-white p-6 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                    style="transition-delay: 300ms;">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-2xl bg-gray-100">
+                        <img src="nephrology.jpg" alt="Nephrology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-slate-800">Nephrology</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Kidney health medications and renal care solutions
+                        for patients with renal conditions.</p>
+                    <div class="flex items-center text-cyan-500 font-bold text-sm">
+                        <span>View Products</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="VIRTUE LOGO.jpeg" alt="Virtue Life Care Logo" class="h-12 w-auto object-contain">
+                        <div>
+                            <h3 class="text-xl font-bold">Virtue Life Care</h3>
+                            <p class="text-sm text-gray-400">Marketing Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Excellence in healthcare solutions since 2020. Committed to quality, innovation, and ethical
+                        practices in pharmaceutical services.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p><strong>CIN:</strong> U52590AP2020PTC116248</p>
+                        <p><strong>Email:</strong> support@virtuelifecare.com</p>
+                        <p><strong>Phone:</strong> 9581555536</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-map-pin-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Regd Office:</p>
+                                <p class="text-sm"># 115-7-297, 2nd Floor, Konthamuru Katheru Road, Konthamuru,
+                                    Rajahmundry, Andhra Pradesh-533102</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-building-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Corp. Office:</p>
+                                <p class="text-sm">#14, 15, VinayakaLayout, Shanthi Pura, Electronic City Phase II,
+                                    Bangalore, Karnataka, India -560100</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-mail-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Email:</p>
+                                <p class="text-sm">support@virtuelifecare.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-phone-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Mobile:</p>
+                                <p class="text-sm">9581555536</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Virtue Life Care Marketing Pvt. Ltd. All rights reserved. | Designed by <a
+                        href="https://www.theupliv.com" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition-colors">UPliv</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-24 right-4 md:bottom-6 md:right-6 z-40 flex flex-col space-y-3">
+        <button id="whatsapp-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors hover:scale-105 transform">
+            <i class="ri-whatsapp-fill text-xl md:text-2xl"></i>
+        </button>
+        <button id="livechat-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-colors hover:scale-105 transform">
+            <i class="ri-customer-service-2-fill text-xl md:text-2xl"></i>
+        </button>
+    </div>
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-50 px-4 pb-4 pt-2">
+        <div class="flex justify-around items-center">
+            <a href="index.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-home-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="about.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-information-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">About</span>
+            </a>
+            <a href="products.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-medicine-bottle-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Products</span>
+            </a>
+            <a href="careers.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-briefcase-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Careers</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll Animation Observer -->
+    <script>
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+    <script id="floating-support-buttons">
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const livechatBtn = document.getElementById('livechat-btn');
+            const mobileWhatsappBtn = document.getElementById('mobile-whatsapp');
+            const mobileChatBtn = document.getElementById('mobile-chat');
+            function openWhatsApp() {
+                const phoneNumber = '919581555536';
+                const message = 'Hello! I would like to inquire about your healthcare products and services.';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+            function openLiveChat() {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end sm:items-center justify-center p-4';
+                modal.innerHTML = `
+<div class="bg-white rounded-t-2xl sm:rounded-2xl max-w-md w-full max-h-[80vh] flex flex-col">
+<div class="flex items-center justify-between p-4 border-b border-gray-200">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full">
+<i class="ri-robot-line text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Chat Support</h3>
+<p class="text-xs text-green-600">● Online</p>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600" onclick="this.closest('.fixed').remove()">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 max-h-96">
+<div class="flex items-start space-x-2">
+<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">Hello! Welcome to Virtue Life Care. I'm here to help you with instant answers. How can I assist you today?</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200">
+<div class="flex space-x-2">
+<input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+<button id="send-chat" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+<i class="ri-send-plane-line"></i>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="products">Products</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="price">Pricing</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="quality">Quality</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="contact">Contact</button>
+</div>
+</div>
+</div>
+`;
+                document.body.appendChild(modal);
+                const chatResponses = {
+                    'hello': 'Hello! Welcome to Virtue Life Care. How can I help you today?',
+                    'hi': 'Hi there! Thanks for contacting Virtue Life Care. What can I assist you with?',
+                    'products': 'We offer pharmaceutical products in Gynecology, Nutrition, Cardiology, Diabetic Care, Neurology, Pain Management, Antibiotics, and General Medicine. Which category interests you?',
+                    'price': 'For pricing information, please contact us at 9581555536 or email support@virtuelifecare.com. Our team will provide you with detailed quotes.',
+                    'quality': 'All our products are ISO certified and manufactured following international quality standards. We maintain 99% quality compliance.',
+                    'contact': 'You can reach us at:\nPhone: 9581555536\nEmail: support@virtuelifecare.com\nHead Office: Rajahmundry, Andhra Pradesh',
+                    'help': 'I can help you with information about our products, pricing, quality standards, and contact details. What would you like to know?',
+                    'default': 'Thank you for your message. For specific inquiries, please contact us at 9581555536 or support@virtuelifecare.com. Our team will assist you promptly.'
+                };
+                const chatMessages = modal.querySelector('#chat-messages');
+                const chatInput = modal.querySelector('#chat-input');
+                const sendButton = modal.querySelector('#send-chat');
+                const quickButtons = modal.querySelectorAll('.chat-quick-btn');
+                function addMessage(message, isUser = false) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `flex items-start space-x-2 ${isUser ? 'justify-end' : ''}`;
+                    messageDiv.innerHTML = isUser ?
+                        `<div class="bg-primary text-white rounded-lg p-3 max-w-xs">
+<p class="text-sm">${message}</p>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full flex-shrink-0">
+<i class="ri-user-line text-white text-sm"></i>
+</div>` :
+                        `<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">${message}</p>
+</div>`;
+                    chatMessages.appendChild(messageDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+                function getResponse(message) {
+                    const lowerMsg = message.toLowerCase();
+                    for (let key in chatResponses) {
+                        if (lowerMsg.includes(key)) {
+                            return chatResponses[key];
+                        }
+                    }
+                    return chatResponses['default'];
+                }
+                function sendMessage() {
+                    const message = chatInput.value.trim();
+                    if (message) {
+                        addMessage(message, true);
+                        chatInput.value = '';
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    }
+                }
+                sendButton.addEventListener('click', sendMessage);
+                chatInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+                quickButtons.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const message = this.getAttribute('data-msg');
+                        addMessage(message, true);
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    });
+                });
+            }
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (livechatBtn) {
+                livechatBtn.addEventListener('click', openLiveChat);
+            }
+            if (mobileWhatsappBtn) {
+                mobileWhatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (mobileChatBtn) {
+                mobileChatBtn.addEventListener('click', openLiveChat);
+            }
+        });
+    </script>
+</body>
+
+</html>

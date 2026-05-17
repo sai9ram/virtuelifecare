@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtue Life Care - Excellence in Healthcare Solutions</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/d6b43d857eae7ebc6fa85e1e182021c0.png">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4338CA',
+                        secondary: '#059669'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .bg-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .slide-in-left.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .slide-in-right.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s ease-out;
+        }
+
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .stagger-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white md:pb-0 pb-20 overflow-x-hidden">
+    <nav class="bg-white shadow-sm border-b border-gray-100 fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://static.readdy.ai/image/818077ef9c911014bae9ea13c42e9810/1cd85d1b8dbae4b4ddbf339ff2b2751a.jpeg"
+                            alt="Virtue Life Care Logo" class="h-10 w-auto object-contain">
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                        <a href="products.html" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                        <a href="careers.html" class="text-gray-700 hover:text-primary transition-colors">Careers</a>
+                    </div>
+                </div>
+                <a href="contact.html"
+                    class="bg-primary text-white px-4 md:px-6 py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section id="home"
+        class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-slider">
+            <div class="slide active"
+                style="background-image: url('https://readdy.ai/api/search-image?query=modern%20healthcare%20facility%20with%20advanced%20medical%20equipment%2C%20professional%20pharmaceutical%20laboratory%20with%20blue%20and%20white%20color%20scheme%2C%20sterile%20medical%20environment%20with%20scientists%20working%2C%20contemporary%20healthcare%20technology%20and%20innovation&width=1920&height=1080&seq=bg-slide-1&orientation=landscape')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://readdy.ai/api/search-image?query=pharmaceutical%20manufacturing%20facility%20with%20quality%20control%20processes%2C%20clean%20medical%20production%20line%20with%20workers%20in%20protective%20gear%2C%20modern%20drug%20manufacturing%20equipment%2C%20professional%20healthcare%20industry%20setting&width=1920&height=1080&seq=bg-slide-2&orientation=landscape')">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://readdy.ai/api/search-image?query=healthcare%20professionals%20in%20modern%20medical%20center%2C%20doctors%20and%20nurses%20collaborating%20in%20bright%20hospital%20environment%2C%20contemporary%20medical%20facility%20with%20natural%20lighting%2C%20professional%20healthcare%20teamwork&width=1920&height=1080&seq=bg-slide-3&orientation=landscape')">
+            </div>
+        </div>
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/95 md:from-white/90 md:via-white/70 md:to-white/90">
+        </div>
+        <div
+            class="absolute top-5 left-5 md:top-10 md:left-10 w-16 h-16 md:w-32 md:h-32 bg-primary/10 rounded-full blur-3xl">
+        </div>
+        <div
+            class="absolute top-20 right-10 md:top-40 md:right-20 w-12 h-12 md:w-24 md:h-24 bg-secondary/10 rounded-full blur-2xl">
+        </div>
+        <div
+            class="absolute bottom-10 left-10 md:bottom-20 md:left-20 w-20 h-20 md:w-40 md:h-40 bg-primary/5 rounded-full blur-3xl">
+        </div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-screen py-8">
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+                <div class="lg:col-span-7 space-y-6 lg:space-y-8 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center px-3 py-2 md:px-4 md:py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200">
+                        <div class="w-2 h-2 bg-green-500 rounded-full mr-2 md:mr-3"></div>
+                        <span class="text-xs md:text-sm font-medium text-gray-700">Trusted by 50+ Healthcare
+                            Partners</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                        Your Health,<br>
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our
+                            Priority</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Excellence in pharmaceutical solutions since 2020. We deliver innovative healthcare products
+                        that make a difference in people's lives worldwide.
+                    </p>
+                    <div class="flex items-center justify-center lg:justify-start space-x-4 md:space-x-8 text-center">
+                        <div>
+                            <div class="text-xl md:text-3xl font-bold text-primary mb-1">500+</div>
+                            <p class="text-xs md:text-sm text-gray-600">Products</p>
+                        </div>
+                        <div class="w-px h-8 md:h-12 bg-gray-300"></div>
+                        <div>
+                            <div class="text-xl md:text-3xl font-bold text-secondary mb-1">99%</div>
+                            <p class="text-xs md:text-sm text-gray-600">Quality Rate</p>
+                        </div>
+                        <div class="w-px h-8 md:h-12 bg-gray-300"></div>
+                        <div>
+                            <div class="text-xl md:text-3xl font-bold text-primary mb-1">24/7</div>
+                            <p class="text-xs md:text-sm text-gray-600">Support</p>
+                        </div>
+                    </div>
+                    <div class="lg:hidden">
+                        <div class="relative max-w-md mx-auto">
+                            <div
+                                class="absolute -top-2 -left-2 w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-xl">
+                            </div>
+                            <div
+                                class="relative bg-white/90 backdrop-blur-sm rounded-3xl p-4 shadow-2xl border border-white/50">
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-3 text-center">
+                                        <div
+                                            class="w-8 h-8 flex items-center justify-center bg-primary/20 rounded-xl mx-auto mb-2">
+                                            <i class="ri-heart-pulse-line text-primary text-lg"></i>
+                                        </div>
+                                        <h3 class="font-semibold text-gray-900 mb-1 text-sm">Cardiology</h3>
+                                        <p class="text-xs text-gray-600">Heart Care</p>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-3 text-center">
+                                        <div
+                                            class="w-8 h-8 flex items-center justify-center bg-secondary/20 rounded-xl mx-auto mb-2">
+                                            <i class="ri-women-line text-secondary text-lg"></i>
+                                        </div>
+                                        <h3 class="font-semibold text-gray-900 mb-1 text-sm">Gynecology</h3>
+                                        <p class="text-xs text-gray-600">Women's Health</p>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-3 text-center">
+                                        <div
+                                            class="w-8 h-8 flex items-center justify-center bg-purple-500/20 rounded-xl mx-auto mb-2">
+                                            <i class="ri-brain-line text-purple-500 text-lg"></i>
+                                        </div>
+                                        <h3 class="font-semibold text-gray-900 mb-1 text-sm">Neurology</h3>
+                                        <p class="text-xs text-gray-600">Brain Health</p>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-3 text-center">
+                                        <div
+                                            class="w-8 h-8 flex items-center justify-center bg-orange-500/20 rounded-xl mx-auto mb-2">
+                                            <i class="ri-drop-line text-orange-500 text-lg"></i>
+                                        </div>
+                                        <h3 class="font-semibold text-gray-900 mb-1 text-sm">Diabetic Care</h3>
+                                        <p class="text-xs text-gray-600">Sugar Control</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <div class="inline-flex items-center space-x-2 text-xs text-gray-600">
+                                        <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                        <span>8+ Medical Categories Available</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                        <button
+                            class="bg-primary text-white px-6 py-3 md:px-8 md:py-4 !rounded-button hover:bg-primary/90 transition-all duration-300 text-base md:text-lg font-semibold whitespace-nowrap shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Explore Products
+                        </button>
+                        <button
+                            class="bg-white text-primary px-6 py-3 md:px-8 md:py-4 !rounded-button hover:bg-gray-50 transition-all duration-300 text-base md:text-lg font-semibold whitespace-nowrap border-2 border-primary/20 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative order-first lg:order-last hidden lg:block">
+                    <div class="relative max-w-md mx-auto lg:max-w-none">
+                        <div
+                            class="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-xl">
+                        </div>
+                        <div
+                            class="relative bg-white/90 backdrop-blur-sm rounded-3xl p-4 md:p-8 shadow-2xl border border-white/50">
+                            <div class="grid grid-cols-2 gap-3 md:gap-6">
+                                <div
+                                    class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-3 md:p-6 text-center">
+                                    <div
+                                        class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-primary/20 rounded-xl mx-auto mb-2 md:mb-3">
+                                        <i class="ri-heart-pulse-line text-primary text-lg md:text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1 text-sm md:text-base">Cardiology</h3>
+                                    <p class="text-xs md:text-sm text-gray-600">Heart Care</p>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-3 md:p-6 text-center">
+                                    <div
+                                        class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-secondary/20 rounded-xl mx-auto mb-2 md:mb-3">
+                                        <i class="ri-women-line text-secondary text-lg md:text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1 text-sm md:text-base">Gynecology</h3>
+                                    <p class="text-xs md:text-sm text-gray-600">Women's Health</p>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-3 md:p-6 text-center">
+                                    <div
+                                        class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-purple-500/20 rounded-xl mx-auto mb-2 md:mb-3">
+                                        <i class="ri-brain-line text-purple-500 text-lg md:text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1 text-sm md:text-base">Neurology</h3>
+                                    <p class="text-xs md:text-sm text-gray-600">Brain Health</p>
+                                </div>
+                                <div
+                                    class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-3 md:p-6 text-center">
+                                    <div
+                                        class="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-orange-500/20 rounded-xl mx-auto mb-2 md:mb-3">
+                                        <i class="ri-drop-line text-orange-500 text-lg md:text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-1 text-sm md:text-base">Diabetic Care</h3>
+                                    <p class="text-xs md:text-sm text-gray-600">Sugar Control</p>
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-6 text-center">
+                                <div class="inline-flex items-center space-x-2 text-xs md:text-sm text-gray-600">
+                                    <div class="w-2 h-2 bg-primary rounded-full"></div>
+                                    <span>8+ Medical Categories Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-4 right-4 md:top-8 md:right-8 w-4 h-4 md:w-6 md:h-6 bg-primary/20 rounded-full animate-pulse">
+                    </div>
+                    <div
+                        class="absolute bottom-6 left-6 md:bottom-12 md:left-12 w-3 h-3 md:w-4 md:h-4 bg-secondary/30 rounded-full animate-pulse delay-300">
+                    </div>
+                    <div
+                        class="absolute top-10 left-4 md:top-20 md:left-8 w-2 h-2 md:w-3 md:h-3 bg-orange-400/20 rounded-full animate-pulse delay-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Virtue Life Care</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Founded in 2020, we are dedicated to providing exceptional pharmaceutical and healthcare solutions
+                    with unwavering commitment to quality and ethics.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <img src="About.png" alt="Virtue Life Care Facility"
+                        class="w-full h-auto rounded-2xl shadow-lg object-cover">
+                </div>
+                <div class="space-y-6 slide-in-right">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg">
+                            <i class="ri-heart-pulse-line text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Healthcare Excellence</h3>
+                            <p class="text-gray-600">Committed to delivering the highest quality pharmaceutical products
+                                and healthcare solutions to improve lives worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg">
+                            <i class="ri-shield-check-line text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
+                            <p class="text-gray-600">Every product undergoes rigorous quality control processes to
+                                ensure safety, efficacy, and compliance with international standards.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg">
+                            <i class="ri-lightbulb-line text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Innovation Focus</h3>
+                            <p class="text-gray-600">Continuously investing in research and development to bring
+                                innovative healthcare solutions to market.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Product Categories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive range of pharmaceutical products across multiple therapeutic areas to meet diverse
+                    healthcare needs.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 stagger-container">
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="Gynecology.jpg" alt="Gynecology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Gynecology</h3>
+                    <p class="text-sm md:text-base text-gray-600">Specialized women's health products and reproductive
+                        care solutions.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="nutrition.jpg" alt="Nutrition"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Nutrition</h3>
+                    <p class="text-sm md:text-base text-gray-600">Essential vitamins, minerals, and nutritional
+                        supplements for optimal health.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="cardiology.avif" alt="Cardiology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Cardiology</h3>
+                    <p class="text-sm md:text-base text-gray-600">Cardiovascular medications for heart health and
+                        circulatory system care.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="diabetics.jpg" alt="Diabetic Care"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Diabetic Care</h3>
+                    <p class="text-sm md:text-base text-gray-600">Comprehensive diabetes management solutions and blood
+                        sugar control.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="neurology0.jpg" alt="Neurology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Neurology</h3>
+                    <p class="text-sm md:text-base text-gray-600">Neurological treatments for brain and nervous system
+                        disorders.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="general-medicine.webp" alt="General Medicine"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">General Medicine</h3>
+                    <p class="text-sm md:text-base text-gray-600">Essential medications including pain management and
+                        antibiotics for common health conditions.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="dermatology.jpg" alt="Dermatology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Dermatology</h3>
+                    <p class="text-sm md:text-base text-gray-600">Skin care treatments and dermatological solutions for
+                        healthy skin.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="pediatrics.jpg" alt="Pediatrics"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Pediatrics</h3>
+                    <p class="text-sm md:text-base text-gray-600">Specialized medications and healthcare solutions for
+                        children.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="orthopedics.webp" alt="Orthopedics"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Orthopedics</h3>
+                    <p class="text-sm md:text-base text-gray-600">Bone and joint health medications for musculoskeletal
+                        care.</p>
+                </div>
+                <div
+                    class="bg-white border border-gray-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow stagger-item group">
+                    <div class="aspect-video w-full mb-4 overflow-hidden rounded-xl bg-gray-100">
+                        <img src="nephrology.jpg" alt="Nephrology"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Nephrology</h3>
+                    <p class="text-sm md:text-base text-gray-600">Kidney health medications and renal care solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Virtue Life Care</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our commitment to excellence, innovation, and ethical practices makes us a trusted partner in
+                    healthcare.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-container">
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+                        <i class="ri-award-line text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Trusted Quality</h3>
+                    <p class="text-gray-600">ISO certified manufacturing processes ensuring consistent product quality
+                        and safety standards.</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+                        <i class="ri-rocket-line text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600">Cutting-edge research and development bringing advanced healthcare
+                        solutions to market.</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+                        <i class="ri-team-line text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
+                    <p class="text-gray-600">Experienced professionals with deep expertise in pharmaceutical sciences
+                        and healthcare.</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-full mx-auto mb-6">
+                        <i class="ri-customer-service-line text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Customer Focus</h3>
+                    <p class="text-gray-600">Dedicated support and personalized service to meet unique healthcare
+                        requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Commitment to Excellence</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Built on strong foundations of integrity, quality, and innovation, we deliver healthcare solutions
+                    that make a difference in people's lives.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20pharmaceutical%20research%20laboratory%20with%20scientists%20working%2C%20advanced%20medical%20equipment%20and%20technology%2C%20clean%20sterile%20environment%20with%20blue%20and%20white%20color%20scheme%2C%20professional%20healthcare%20research%20facility%20with%20quality%20control%20processes&width=600&height=400&seq=research-lab&orientation=landscape"
+                        alt="Quality Research Lab" class="w-full h-auto rounded-2xl shadow-lg object-cover">
+                </div>
+                <div class="space-y-8 slide-in-right">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-xl">
+                            <i class="ri-microscope-line text-primary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Research & Development</h3>
+                            <p class="text-gray-600 leading-relaxed">Our dedicated R&D team continuously works on
+                                developing innovative pharmaceutical formulations and improving existing products to
+                                meet evolving healthcare needs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 flex items-center justify-center bg-secondary/10 rounded-xl">
+                            <i class="ri-scales-3-line text-secondary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Ethical Practices</h3>
+                            <p class="text-gray-600 leading-relaxed">We maintain the highest ethical standards in all
+                                our business operations, ensuring transparency, fairness, and compliance with regulatory
+                                guidelines.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-xl">
+                            <i class="ri-global-line text-primary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Global Standards</h3>
+                            <p class="text-gray-600 leading-relaxed">All our products are manufactured following
+                                international quality standards and guidelines, ensuring safety and efficacy across
+                                global markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 lg:p-12 scale-in">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                        <p class="text-gray-600 font-semibold">Products Delivered</p>
+                        <p class="text-sm text-gray-500 mt-1">Across multiple therapeutic areas</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-secondary mb-2">50+</div>
+                        <p class="text-gray-600 font-semibold">Healthcare Partners</p>
+                        <p class="text-sm text-gray-500 mt-1">Trusted by medical institutions</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold text-primary mb-2">99%</div>
+                        <p class="text-gray-600 font-semibold">Quality Compliance</p>
+                        <p class="text-sm text-gray-500 mt-1">Meeting international standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Partners Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trusted by healthcare professionals and institutions worldwide for our quality and reliability.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 stagger-container">
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Virtue Life Care has been our trusted pharmaceutical partner for over
+                        three years. Their commitment to quality and timely delivery is exceptional."</p>
+                    <div class="flex items-center">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20healthcare%20doctor%20portrait%2C%20confident%20medical%20professional%20in%20white%20coat%2C%20trustworthy%20physician%20with%20stethoscope%2C%20clean%20medical%20background%2C%20corporate%20healthcare%20photography&width=60&height=60&seq=doctor-1&orientation=squarish"
+                            alt="Dr. Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Dr. Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Chief Medical Officer, Metro Hospital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The quality of products and professional service from Virtue Life
+                        Care consistently exceeds our expectations. Highly recommended for healthcare institutions."</p>
+                    <div class="flex items-center">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20pharmacy%20manager%20portrait%2C%20confident%20healthcare%20professional%20in%20business%20attire%2C%20experienced%20pharmaceutical%20expert%2C%20clean%20corporate%20background%2C%20trustworthy%20medical%20industry%20leader&width=60&height=60&seq=pharmacist-1&orientation=squarish"
+                            alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Pharmacy Director, HealthPlus Chain</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm stagger-item">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Their innovative approach to healthcare solutions and commitment to
+                        ethical practices makes them an ideal partner for our medical center."</p>
+                    <div class="flex items-center">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20healthcare%20administrator%20portrait%2C%20confident%20medical%20center%20director%20in%20professional%20attire%2C%20experienced%20healthcare%20executive%2C%20clean%20office%20background%2C%20trustworthy%20medical%20leadership&width=60&height=60&seq=admin-1&orientation=squarish"
+                            alt="Dr. Priya Sharma" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Dr. Priya Sharma</h4>
+                            <p class="text-sm text-gray-600">Director, Wellness Medical Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gradient-to-r from-purple-600 via-purple-500 to-fuchsia-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <h2 class="text-4xl font-bold text-white mb-4">Stay Updated with Healthcare News</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter for the latest updates on pharmaceutical innovations and healthcare
+                solutions.
+            </p>
+            <form action="https://formsubmit.co/support@virtuelifecare.com" method="POST">
+                <div class="max-w-md mx-auto">
+                    <div class="flex gap-4">
+                        <input type="email" placeholder="Enter your email address"
+                            class="flex-1 px-4 py-3 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-white text-gray-900">
+                        <button
+                            class="bg-secondary text-white px-6 py-3 !rounded-button hover:bg-secondary/90 transition-colors font-semibold whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="VIRTUE LOGO.jpeg" alt="Virtue Life Care Logo" class="h-12 w-auto object-contain">
+                        <div>
+                            <h3 class="text-xl font-bold">Virtue Life Care</h3>
+                            <p class="text-sm text-gray-400">Marketing Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Excellence in healthcare solutions since 2020. Committed to quality, innovation, and ethical
+                        practices in pharmaceutical services.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <p><strong>CIN:</strong> U52590AP2020PTC116248</p>
+                        <p><strong>Email:</strong> support@virtuelifecare.com</p>
+                        <p><strong>Phone:</strong> 9581555536</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-map-pin-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Regd Office:</p>
+                                <p class="text-sm"># 115-7-297, 2nd Floor, Konthamuru Katheru Road, Konthamuru,
+                                    Rajahmundry, Andhra Pradesh-533102</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-building-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Corp. Office:</p>
+                                <p class="text-sm">#14, 15, VinayakaLayout, Shanthi Pura, Electronic City Phase II,
+                                    Bangalore, Karnataka, India -560100</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-mail-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Email:</p>
+                                <p class="text-sm">support@virtuelifecare.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-phone-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm">Mobile:</p>
+                                <p class="text-sm">9581555536</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Virtue Life Care Marketing Pvt. Ltd. All rights reserved. | Designed by <a
+                        href="https://www.theupliv.com" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition-colors">UPliv</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script id="navigation-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a[href^="#"], .mobile-nav-item[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        document.querySelectorAll('.mobile-nav-item').forEach(item => {
+                            item.classList.remove('text-primary');
+                            item.classList.add('text-gray-600');
+                        });
+                        this.classList.remove('text-gray-600');
+                        this.classList.add('text-primary');
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="newsletter-subscription">
+        document.addEventListener('DOMContentLoaded', function () {
+            const subscribeButton = document.querySelector('section.bg-primary button');
+            const emailInput = document.querySelector('section.bg-primary input[type="email"]');
+            subscribeButton.addEventListener('click', function () {
+                const email = emailInput.value.trim();
+                if (email && email.includes('@')) {
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+            emailInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    subscribeButton.click();
+                }
+            });
+        });
+    </script>
+    <div class="fixed bottom-24 right-4 md:bottom-6 md:right-6 z-40 flex flex-col space-y-3">
+        <button id="whatsapp-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors hover:scale-105 transform">
+            <i class="ri-whatsapp-fill text-xl md:text-2xl"></i>
+        </button>
+        <button id="livechat-btn"
+            class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-colors hover:scale-105 transform">
+            <i class="ri-customer-service-2-fill text-xl md:text-2xl"></i>
+        </button>
+    </div>
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 md:hidden z-50 px-4 pb-4 pt-2">
+        <div class="flex justify-around items-center">
+            <a href="index.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-home-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="about.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-information-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">About</span>
+            </a>
+            <a href="products.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-medicine-bottle-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Products</span>
+            </a>
+            <a href="careers.html"
+                class="mobile-nav-item flex flex-col items-center space-y-1 p-2 text-gray-600 hover:text-primary transition-colors">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-briefcase-line text-xl"></i>
+                </div>
+                <span class="text-xs font-medium">Careers</span>
+            </a>
+        </div>
+    </div>
+    <script id="cta-buttons">
+        document.addEventListener('DOMContentLoaded', function () {
+            const exploreButton = document.querySelector('section[id="home"] button:first-of-type');
+            const contactButton = document.querySelector('section[id="home"] button:last-of-type');
+            const getQuoteButton = document.querySelector('nav button');
+            exploreButton.addEventListener('click', function () {
+                document.querySelector('#products').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+            contactButton.addEventListener('click', function () {
+                document.querySelector('footer').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+            getQuoteButton.addEventListener('click', function () {
+                alert('Thank you for your interest! Our team will contact you shortly for a personalized quote.');
+            });
+        });
+    </script>
+    <script id="background-slider">
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            setInterval(nextSlide, 4000);
+        });
+    </script>
+    <script id="scroll-animations">
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if (entry.target.classList.contains('stagger-container')) {
+                            const items = entry.target.querySelectorAll('.stagger-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('animate');
+                                }, index * 100);
+                            });
+                        } else {
+                            entry.target.classList.add('animate');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .stagger-container');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script id="floating-support-buttons">
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const livechatBtn = document.getElementById('livechat-btn');
+            const mobileWhatsappBtn = document.getElementById('mobile-whatsapp');
+            const mobileChatBtn = document.getElementById('mobile-chat');
+            function openWhatsApp() {
+                const phoneNumber = '919581555536';
+                const message = 'Hello! I would like to inquire about your healthcare products and services.';
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+            function openLiveChat() {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end sm:items-center justify-center p-4';
+                modal.innerHTML = `
+<div class="bg-white rounded-t-2xl sm:rounded-2xl max-w-md w-full max-h-[80vh] flex flex-col">
+<div class="flex items-center justify-between p-4 border-b border-gray-200">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary rounded-full">
+<i class="ri-robot-line text-white"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Chat Support</h3>
+<p class="text-xs text-green-600">● Online</p>
+</div>
+</div>
+<button class="text-gray-400 hover:text-gray-600" onclick="this.closest('.fixed').remove()">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 max-h-96">
+<div class="flex items-start space-x-2">
+<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">Hello! Welcome to Virtue Life Care. I'm here to help you with instant answers. How can I assist you today?</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-gray-200">
+<div class="flex space-x-2">
+<input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm">
+<button id="send-chat" class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 transition-colors">
+<i class="ri-send-plane-line"></i>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="products">Products</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="price">Pricing</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="quality">Quality</button>
+<button class="chat-quick-btn text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200" data-msg="contact">Contact</button>
+</div>
+</div>
+</div>
+`;
+                document.body.appendChild(modal);
+                const chatResponses = {
+                    'hello': 'Hello! Welcome to Virtue Life Care. How can I help you today?',
+                    'hi': 'Hi there! Thanks for contacting Virtue Life Care. What can I assist you with?',
+                    'products': 'We offer pharmaceutical products in Gynecology, Nutrition, Cardiology, Diabetic Care, Neurology, Pain Management, Antibiotics, and General Medicine. Which category interests you?',
+                    'price': 'For pricing information, please contact us at 9581555536 or email support@virtuelifecare.com. Our team will provide you with detailed quotes.',
+                    'quality': 'All our products are ISO certified and manufactured following international quality standards. We maintain 99% quality compliance.',
+                    'contact': 'You can reach us at:\nPhone: 9581555536\nEmail: support@virtuelifecare.com\nHead Office: Rajahmundry, Andhra Pradesh',
+                    'help': 'I can help you with information about our products, pricing, quality standards, and contact details. What would you like to know?',
+                    'default': 'Thank you for your message. For specific inquiries, please contact us at 9581555536 or support@virtuelifecare.com. Our team will assist you promptly.'
+                };
+                const chatMessages = modal.querySelector('#chat-messages');
+                const chatInput = modal.querySelector('#chat-input');
+                const sendButton = modal.querySelector('#send-chat');
+                const quickButtons = modal.querySelectorAll('.chat-quick-btn');
+                function addMessage(message, isUser = false) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `flex items-start space-x-2 ${isUser ? 'justify-end' : ''}`;
+                    messageDiv.innerHTML = isUser ?
+                        `<div class="bg-primary text-white rounded-lg p-3 max-w-xs">
+<p class="text-sm">${message}</p>
+</div>
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full flex-shrink-0">
+<i class="ri-user-line text-white text-sm"></i>
+</div>` :
+                        `<div class="w-8 h-8 flex items-center justify-center bg-secondary rounded-full flex-shrink-0">
+<i class="ri-robot-line text-white text-sm"></i>
+</div>
+<div class="bg-gray-100 rounded-lg p-3 max-w-xs">
+<p class="text-sm text-gray-800">${message}</p>
+</div>`;
+                    chatMessages.appendChild(messageDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+                function getResponse(message) {
+                    const lowerMsg = message.toLowerCase();
+                    for (let key in chatResponses) {
+                        if (lowerMsg.includes(key)) {
+                            return chatResponses[key];
+                        }
+                    }
+                    return chatResponses['default'];
+                }
+                function sendMessage() {
+                    const message = chatInput.value.trim();
+                    if (message) {
+                        addMessage(message, true);
+                        chatInput.value = '';
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    }
+                }
+                sendButton.addEventListener('click', sendMessage);
+                chatInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+                quickButtons.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const message = this.getAttribute('data-msg');
+                        addMessage(message, true);
+                        setTimeout(() => {
+                            const response = getResponse(message);
+                            addMessage(response);
+                        }, 1000);
+                    });
+                });
+            }
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (livechatBtn) {
+                livechatBtn.addEventListener('click', openLiveChat);
+            }
+            if (mobileWhatsappBtn) {
+                mobileWhatsappBtn.addEventListener('click', openWhatsApp);
+            }
+            if (mobileChatBtn) {
+                mobileChatBtn.addEventListener('click', openLiveChat);
+            }
+        });
+    </script>
+</body>
+
+</html>
